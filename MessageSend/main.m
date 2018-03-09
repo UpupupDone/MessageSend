@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
+#import "Person.h"
 
 int main(int argc, const char * argv[]) {
+    
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        Person *p = [Person new];
+        [p performSelector:@selector(method)];
     }
     return 0;
 }

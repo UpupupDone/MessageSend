@@ -23,16 +23,16 @@
 //    //根据SEL获取SEL Name
 //    NSString *selName = NSStringFromSelector(sel);
 //
-//    if ([selName isEqualToString:@"testMethod"]) {
+//    if ([selName isEqualToString:@"method"]) {
 //
 //        // 动态的添加一个方法
-//        class_addMethod([self class], @selector(testMethod), (IMP)newTestMethod, "v@:");
+//        class_addMethod([self class], @selector(method), (IMP)newMethod, "v@:");
 //        return YES;
 //    }
 //    return NO;
 //}
 
-//void newTestMethod() {
+//void newMethod() {
 //
 //    NSLog(@"%s", __func__);
 //}
@@ -47,10 +47,10 @@
 //     //根据SEL获取SEL Name
 //     NSString *selName = NSStringFromSelector(aSelector);
 //
-//     if ([selName isEqualToString:@"testMethod"]) {
+//     if ([selName isEqualToString:@"method"]) {
 //
 //     //指定对某一个对象来执行方法
-//         return [ZYChildren new];
+//         return [Student new];
 //     }
 //     return [super forwardingTargetForSelector:aSelector];;
 // }
@@ -66,7 +66,7 @@
     //根据SEL获取SEL Name
     NSString *selName = NSStringFromSelector(aSelector);
     
-    if ([selName isEqualToString:@"testMethod"]) {
+    if ([selName isEqualToString:@"method"]) {
         
         return [NSMethodSignature signatureWithObjCTypes:"v@:"];
     }
@@ -83,7 +83,7 @@
     [anInvocation invokeWithTarget:[Student new]];
     
     //改变响应方法
-    [anInvocation setSelector:@selector(newTestMethod)];
+    [anInvocation setSelector:@selector(newMethod)];
 }
 
 - (void)newTestMethod1 {

@@ -10,8 +10,8 @@
 
 @interface Student : NSObject
 
-- (void)testMethod;
+- (void)method;
 
-- (void)newTestMethod;
+- (void)newMethod;
 
 @end

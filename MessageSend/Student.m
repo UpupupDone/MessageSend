@@ -10,12 +10,12 @@
 
 @implementation Student
 
-- (void)testMethod {
+- (void)method {
     
     NSLog(@"%s", __func__);
 }
 
-- (void)newTestMethod {
+- (void)newMethod {
     
     NSLog(@"%s", __func__);
 }
